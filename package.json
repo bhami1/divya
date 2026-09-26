@@ -1,0 +1,12 @@
+{
+  "name": "divya-universe",
+  "version": "1.0.0",
+  "description": "Her Own Little Universe — A cinematic personal website celebrating Divya",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "serve": "npx serve ."
+  },
+  "author": "Antigravity",
+  "license": "MIT"
+}

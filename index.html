@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVYA — Her Own Little Universe ✦</title>
+  <meta name="description" content="A cinematic, cosmic tribute to Divya — blending her MSc Physics identity, memories, and personal universe.">
+
+  <!-- Inline Celestial Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f6d89a'><path d='M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Starfield Canvas & Nebula Overlay -->
+  <canvas id="starfield-canvas"></canvas>
+  <div class="nebula-glow-overlay"></div>
+
+  <!-- Custom Cosmic Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-trail"></div>
+
+  <!-- ====================================================================
+       1. OPENING / LANDING SCREEN (FULLSCREEN OVERLAY)
+       ==================================================================== -->
+  <section id="opening-screen">
+    <div class="opening-content">
+      <div class="prologue-box">
+        <p class="prologue-line" id="landing-prologue-1">Some people are ordinary.</p>
+        <p class="prologue-line highlight" id="landing-prologue-2">Some people have their own universe.</p>
+      </div>
+
+      <div class="name-reveal-wrap">
+        <div class="name-orbit-glow"></div>
+        <h1 class="name-reveal" id="landing-name">DIVYA</h1>
+      </div>
+
+      <div class="subheading-box">
+        <p class="universe-subheading" id="landing-subheading">
+          A little universe made for <strong style="color: var(--gold-primary);">DIVYA</strong> <span class="spark">✦</span>
+        </p>
+      </div>
+
+      <button id="enter-universe-btn" class="btn-enter-universe" aria-label="Enter her universe">
+        <span class="btn-ring"></span>
+        <span class="btn-label">Enter her universe</span>
+        <span class="btn-icon">✦</span>
+      </button>
+
+      <div class="cosmic-coords-tag" id="landing-coords-tag">
+        COSMIC COORDINATES: RA 18h 36m | DEC +38° 47′ 01″
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       MAIN UNIVERSE EXPERIENCE
+       ==================================================================== -->
+  <main id="main-universe">
+
+    <!-- Top Navigation -->
+    <header class="cosmic-nav">
+      <a href="#her-universe" class="nav-brand">
+        <span class="brand-star">✦</span>
+        <span>DIVYA</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#her-universe" class="nav-link">Centre</a></li>
+          <li><a href="#constellation-gallery" class="nav-link">Constellation</a></li>
+          <li><a href="#physics-her" class="nav-link">Physics × Her</a></li>
+          <li><a href="#celestial-wishes" class="nav-link">Wishes</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Cosmic Ambience">
+          <div class="audio-bars">
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+          </div>
+          <span id="audio-status-label">MUSIC OFF</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================================================================
+         2. HER UNIVERSE (CENTERPIECE HERO)
+         ================================================================== -->
+    <section id="her-universe" class="section-wrapper">
+      <div class="hero-grid">
+        
+        <!-- Centerpiece Portrait Frame with Celestial Orbits -->
+        <div class="centerpiece-photo-container">
+          <div class="orbit-ring">
+            <div class="orbit-planet"></div>
+          </div>
+          <div class="orbit-ring-secondary"></div>
+
+          <div class="centerpiece-frame">
+            <img id="centerpiece-img" src="public/img.jpeg" alt="Divya" />
+            <div class="frame-shimmer-tag">
+              <span>PRIME GRAVITATIONAL CORE</span>
+              <span>✦ 1.0 M☉</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centerpiece Story & Identity -->
+        <div class="hero-text-content">
+          <div class="section-badge" id="centerpiece-badge">✦ THE GRAVITATIONAL CORE ✦</div>
+          <div class="hero-prologue-label" id="centerpiece-intro">At the centre of this universe…</div>
+          <h2 class="hero-name" id="centerpiece-name">DIVYA</h2>
+
+          <ul class="hero-manifesto-list" id="centerpiece-manifesto">
+            <!-- Injected via config.js -->
+          </ul>
+
+          <p class="hero-bio" id="centerpiece-bio">
+            <!-- Injected via config.js -->
+          </p>
+
+          <div class="celestial-stats-grid" id="centerpiece-stats">
+            <!-- Injected via config.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         3. PHOTO CONSTELLATION GALLERY
+         ================================================================== -->
+    <section id="constellation-gallery" class="section-wrapper">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div class="section-badge">✦ CELESTIAL ARCHIVE ✦</div>
+        <h2 class="section-title">Collected from different points in space and time.</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          Moments frozen across the spacetime continuum. Each photograph is a star in her personal constellation.
+        </p>
+      </div>
+
+      <div class="constellation-wrapper">
+        <!-- SVG lines dynamically rendered between stars -->
+        <svg id="constellation-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+        <!-- Irregular Constellation Layout Cards -->
+        <div id="constellation-grid" class="constellation-grid">
+          <!-- Dynamically populated from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. PHYSICS × HER
+         ================================================================== -->
+    <section id="physics-her" class="section-wrapper">
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
+        <div class="section-badge">✦ THE LAWS OF HER UNIVERSE ✦</div>
+        <h2 class="section-title">Physics × Her</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          An empirical breakdown connecting her MSc Physics journey with the delightfully chaotic constants of her personality.
+        </p>
+      </div>
+
+      <div id="physics-grid" class="physics-cards-grid">
+        <!-- Dynamically injected from config.js -->
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         5. BIRTHDAY & CELESTIAL LETTER
+         ================================================================== -->
+    <section id="celestial-wishes" class="section-wrapper">
+      <div class="wishes-parchment">
+        <div class="section-badge" id="wishes-badge">✦ CELESTIAL WISHES ✦</div>
+        <h2 class="wishes-heading" id="wishes-heading">A Wish Written In The Stars</h2>
+        <p class="wishes-sub" id="wishes-sub">To the brightest star in our galaxy</p>
+
+        <div class="letter-paragraphs" id="letter-paragraphs">
+          <!-- Injected via config.js -->
+        </div>
+
+        <div class="wishes-signature" id="wishes-signature">
+          <!-- Injected via config.js -->
+        </div>
+
+        <div>
+          <button id="btn-make-wish" class="btn-make-wish" aria-label="Release a Shooting Star">
+            <span>✦</span>
+            <span class="btn-wish-label">Release a Shooting Star ✦</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         6. FOOTER
+         ================================================================== -->
+    <footer class="cosmic-footer">
+      <p class="footer-quote" id="footer-quote">
+        “The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our apple pies were made in the interiors of collapsing stars. We are made of starstuff.”
+      </p>
+      <div class="footer-author" id="footer-author">— Carl Sagan</div>
+      <div class="footer-dedication" id="footer-dedication">
+        Crafted with cosmic love for Divya's Universe ✦
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ====================================================================
+       7. FULLSCREEN LIGHTBOX MODAL
+       ==================================================================== -->
+  <div id="cosmic-lightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <button id="lightbox-close-btn" class="lightbox-close" aria-label="Close Lightbox">✕</button>
+    <button id="lightbox-prev-btn" class="lightbox-nav-btn lightbox-nav-prev" aria-label="Previous photo">‹</button>
+    <button id="lightbox-next-btn" class="lightbox-nav-btn lightbox-nav-next" aria-label="Next photo">›</button>
+
+    <div class="lightbox-dialog">
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="Expanded View" />
+      </div>
+      <div class="lightbox-info-wrap">
+        <div>
+          <div class="lightbox-tag" id="lightbox-tag">Stellar Archive</div>
+          <h3 class="lightbox-title" id="lightbox-title">Photo Title</h3>
+          <p class="lightbox-caption" id="lightbox-caption">Photo Caption</p>
+        </div>
+        <div class="lightbox-meta" id="lightbox-meta">Celestial Coordinates</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/constellation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
